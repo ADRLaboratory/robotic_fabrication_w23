@@ -25,6 +25,6 @@ Code and documentation for this course is maintained by Daniel Ruan.[^2] The cod
 ----
 
 [^1]: [https://taubmancollege.umich.edu/](https://taubmancollege.umich.edu/)
-[^2]: Architecture PhD student at Taubman College | [deltar@umich.edu](mailto:deltar@umich.edu)
+[^2]: Architecture PhD student at Taubman College \| [deltar@umich.edu](mailto:deltar@umich.edu)
 
 [Prof. Arash Adel]: https://taubmancollege.umich.edu/faculty/directory/arash-adel/

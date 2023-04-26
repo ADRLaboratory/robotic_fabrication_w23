@@ -30,3 +30,6 @@ callouts:
   note:
     title: Note
     color: blue
+  troubleshoot:
+    title: Troubleshooting
+    color: purple
