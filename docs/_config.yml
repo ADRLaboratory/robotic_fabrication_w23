@@ -1,13 +1,13 @@
 # https://just-the-docs.github.io/just-the-docs/docs/configuration/
 
-title: ARCH 509 Robotic Fabrication W23
-description: Course code documentation
+title: Robotic Fabrication
+description: Course code documentation for ARCH 509
 theme: just-the-docs
 
 url: https://adrlaboratory.github.io/robotic_fabrication_w23
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Course Repository: https://github.com/ADRLaboratory/robotic_fabrication_w23
 
 favicon_ico: "/assets/images/adr.ico"
 
