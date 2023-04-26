@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: kr6_base_description
+    relative_path: urdf/kr6_base.urdf
+  srdf:
+    relative_path: config/kr6_base.srdf
+  package_settings:
+    author_name: Daniel Ruan
+    author_email: deltar@umich.edu
+    generated_timestamp: 1678810929

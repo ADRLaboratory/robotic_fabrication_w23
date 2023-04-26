@@ -1,0 +1,14 @@
+<?xml version='1.0' ?>
+<launch>
+  <!-- Publish URDF file in robot_description topic -->
+  <!-- <include file="$(find-pkg-share kr6_base_description)/launch/publish_urdf.launch.py"/> -->
+  <include file="$(find-pkg-share kr6_base_moveit_config)/launch/rsp.launch.py"/>
+  <include file="$(find-pkg-share kr6_base_moveit_config)/launch/move_group.launch.py"/>
+  <!-- Read robot_description and spawn in gazebo running sim -->
+  <include file="$(find-pkg-share kr6_base_gazebo)/launch/spawn_robot_description.launch.py"/>
+  <!-- Launch controllers -->
+  <!-- <include file="$(find-pkg-share kr6_base_control)/launch/kr6_base_control_position.launch.py"/> -->
+  <include file="$(find-pkg-share kr6_base_moveit_config)/launch/spawn_controllers.launch.py"/>
+  <!-- Launch MoveIt rviz -->
+  <include file="$(find-pkg-share kr6_base_moveit_config)/launch/moveit_rviz.launch.py"/>
+</launch>

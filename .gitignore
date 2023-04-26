@@ -1,0 +1,16 @@
+# Distribution / packaging
+build/
+devel/
+.catkin_workspace
+
+# virtualenv
+.venv
+venv/
+ENV/
+env/
+
+# Visual Studio Code
+.vscode/
+
+# Windows
+*.ini
