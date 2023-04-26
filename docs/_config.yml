@@ -29,7 +29,7 @@ callouts:
     color: red
   note:
     title: Note
-    color: blue
+    color: green
   troubleshoot:
     title: Troubleshooting
-    color: purple
+    color: blue

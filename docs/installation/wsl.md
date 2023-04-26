@@ -11,7 +11,8 @@ The Windows Subsystem for Linux (WSL) is a Linux environment developed to run di
 
 {: .note }
 > If your machine is already running a version of Linux or has a Linux virtual machine set up, you don't need to follow this installation. However, some future steps may differ.
-> MacOS is currently not supported.
+>
+> Documentation for MacOS is currently not implemented.
 
 ## Installation
 
