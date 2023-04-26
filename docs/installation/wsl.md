@@ -27,11 +27,11 @@ wsl --install
 ```
 
 {: .troubleshoot }
-If you have WSL installed already, the above command will only show you the WSL help text. Run `wsl --list --online` to see if you have any distributions available. If none are listed, run `wsl --install -d Ubuntu` to install Ubuntu.
+> If you have WSL installed already, the above command will only show you the WSL help text. Run `wsl --list --online` to see if you have any distributions available. If none are listed, run `wsl --install -d Ubuntu` to install Ubuntu.
 
 To test the installation, run `wsl -l -v` in PowerShell or Windows Command Prompt, and you should see the distribution running.
 
 
-[ROS]: "/installation/ros2.md"
-[WSL installation documentation]: "https://learn.microsoft.com/en-us/windows/wsl/install"
+[ROS]: ros2.md
+[WSL installation documentation]: https://learn.microsoft.com/en-us/windows/wsl/install
 [PowerShell]: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows
