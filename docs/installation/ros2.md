@@ -15,7 +15,7 @@ The version of ROS 2 we will be using is [Humble Hawksbill] (ROS Humble).
 
 Part of this section has been adapted from the [ROS 2 Ubuntu installation guide].
 
-All of the following commands will be run in your [WSL] terminal. To open a WSL terminal, either search for 'wsl' in the Windows Start Menu (it should be the first result that comes up), or run the command `wsl` in PowerShell or Windows Command Prompt.
+All of the following commands will be run in your [WSL] terminal. To open a WSL terminal, either search for `wsl` in the Windows Start Menu (it should be the first result that comes up), or run the command `wsl` in PowerShell or Windows Command Prompt.
 
 ### Set locale
 
@@ -80,13 +80,15 @@ sudo apt install ros-humble-desktop
 {: .troubleshoot }
 > If you see that the package installation is aborting, starting a new WSL terminal might help.
 
-Install the remaining packages that we will be using.
+Install the remaining ROS packages that we will be using.
 
 ```shell
 sudo apt install ros-humble-simulation ros-dev-tools ros-humble-xacro ros-humble-joint-state-publisher-gui ros-humble-rosbridge-server ros-humble-ros-gz ros-humble-ros-ign-bridge ros-humble-moveit ros-humble-ign-ros2-control ros-humble-gazebo-ros2-control ros-humble-ros2-controllers
 ```
 
+----
 
+Next step: [Install COMPAS FAB](compasfab.html)
 
 
 [Humble Hawksbill]: https://docs.ros.org/en/humble/index.html#

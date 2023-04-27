@@ -49,7 +49,7 @@ To make working with WSL environments in VS Code easier, search for and install 
 
 ----
 
-Next step: [Install ROS](ros2.html)
+Next step: [Install ROS 2](ros2.html)
 
 
 [Windows Subsystem for Linux]: https://learn.microsoft.com/en-us/windows/wsl/
