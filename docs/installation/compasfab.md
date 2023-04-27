@@ -7,7 +7,7 @@ nav_order: 3
 
 # COMPAS FAB
 
-[COMPAS] is an open source python library used for research and collaboration in Architecture, Engineering, Fabrication, and Construction. [COMPAS FAB] is a package that extends the COMPAS framework to interface with various software libaries and tools used in robotics (e.g., ROS). Using the two together, we will be able to access our ROS environment from within a [Rhino] 3D CAD environment.
+[COMPAS] is an open source python library used for research and collaboration in Architecture, Engineering, Fabrication, and Construction. [COMPAS FAB] is a package that extends the COMPAS framework to interface with various software libaries and tools used in robotics (e.g., ROS). Using the two together, we will be able to access our ROS environment from within a [Rhino 3D] CAD environment.
 
 COMPAS FAB is actively developed and maintained by [Gramazio Kohler Research].
 
@@ -23,7 +23,7 @@ Anaconda is a popular platform for creating and managing Python virtual environm
 
 ### Create a COMPAS FAB environment
 
-To oepn an Anaconda terminal, search for `Anaconda Prompt (Anaconda 3)` in the Windows Start Menu. Run this in **administrator** mode.
+To open an Anaconda terminal, search for `Anaconda Prompt (Anaconda 3)` in the Windows Start Menu. Run this in **administrator** mode.
 
 Create a new enviornment with both COMPAS and COMPAS FAB.
 
@@ -63,6 +63,6 @@ Next step: [Getting Started](../getting_started.html)
 
 [COMPAS]: https://compas.dev/index.html
 [COMPAS FAB]: https://gramaziokohler.github.io/compas_fab/latest/
-[Rhino]: https://www.rhino3d.com/
+[Rhino 3D]: https://www.rhino3d.com/
 [Gramazio Kohler Research]: https://gramaziokohler.arch.ethz.ch/web/e/forschung/index.html
 [COMPAS FAB Getting started guide]: https://gramaziokohler.github.io/compas_fab/latest/getting_started.html
