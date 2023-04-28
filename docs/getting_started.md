@@ -40,9 +40,11 @@ colcon build
 
 We will now open this workspace in VS Code, which has terminal functionalities built-in so you will no longer need to use a separate WSL terminal.
 
-In VS Code, make sure you have the [WSL extension installed](installtion.wsl.html#vs-code). Open the Command Palette (`Ctrl + Shift + P`) and run `WSL: Open Folder in WSL...`. Navigate and select the `kr6` folder you just made (`Ubuntu > home > <username> > kr6`).
+In VS Code, make sure you have the [WSL extension installed](installtion.wsl.html#vs-code).
 
-To open a terminal in VS Code, go to `Terminal > New Terminal` or use the shortcut `Ctrl + Shift + \``. This terminal will work exactly the same ways as the WSL terminal you used previously.
+Open the Command Palette (`Ctrl + Shift + P`) and run `WSL: Open Folder in WSL...`. Navigate and select the `kr6` folder you just made (`Ubuntu > home > <username> > kr6`).
+
+To open a terminal in VS Code, go to `Terminal > New Terminal` or use the shortcut `` Ctrl + Shift + ` ``. This terminal will work exactly the same ways as the WSL terminal you used previously.
 
 Whenever you open a new terminal in the ROS workspace, make sure to source `install/setup.bash`:
 
@@ -101,7 +103,15 @@ This command will open RViz and a Joint State Publisher GUI.
 
 To display the robot, first we need to define the global frame. Under `Global Options`, select the dropdown for `Fixed Frame` and change it to `world`.
 
-At the bottom left, select `Add` then `RobotModel`. Under the newly added `RobotModel`, select the dropdown for the `Description Topic` and change it to `/robot_description`.
+![Set World Frame](assets/images/getting_started/set_world_frame.png)
+
+At the bottom left, select `Add` then `RobotModel`.
+
+![Add RobotModel](assets/images/getting_started/add_robot_model.png)
+
+Under the newly added `RobotModel`, select the dropdown for the `Description Topic` and change it to `/robot_description`.
+
+![Set Description Topic](assets/images/getting_started//set_robotmodel_description_topic.png)
 
 You should now see the robot geometry in RViz and manipulate its joints using the sliders in the Joint State Publisher GUI!
 
