@@ -23,7 +23,6 @@ from compas_fab.robots import Tool
 tool_mesh = Mesh.from_stl(tool_stl_filepath)
 tool = Tool(tool_mesh, tool_frame, link_name='flange')
 robot.attach_tool(tool)
-
 ```
 
 Where `robot` is an instance of `compas_fab.robots.Robot`.
