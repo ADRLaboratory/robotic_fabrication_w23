@@ -5,18 +5,17 @@ nav_order: 3
 ---
 
 # Getting Started
+{: .no_toc }
 
 If you haven't already, please finish all of the required [installation](installation.html) steps.
 
 The following guide will get you started with robotic fabrication on the FABLab's KUKA KR 6 robots.
 
 ## Table of contents
-1. [Code repository](#code-repository)
-2. [Create a ROS workspace](#create-a-ros-workspace)
-3. [Build ROS packages](#build-ros-packages)
-4. [RViz visualization test](#rviz-visualization-test)
-5. [MoveIt and Gazebo test](#moveit-and-gazebo-test)
-6. [Connecting ROS to Rhino](#connecting-ros-to-rhino)
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Code repository
 
