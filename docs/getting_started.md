@@ -28,6 +28,8 @@ All of the files and code you will need to get started are located in `src` fold
 
 Make sure to unblock the ZIP file before extracting! (`Right click > Properties > Unblock`)
 
+----
+
 ## Create a ROS workspace
 
 Recall that we will be working with ROS through WSL. Open up a WSL terminal and run these commands:
@@ -64,6 +66,8 @@ source install/setup.bash
 {: .note }
 > Similar to how we sourced the `setup.bash` from the ROS package previously, this `setup.bash` tells the terminal where our local package files are. However, we don't want to add this to `~/.bashrc` to run automatically every time since you won't always be working with a local workspace that has a `install/setup.bash` file.
 
+----
+
 ## Build ROS packages
 
 Included in the provided code are three packages:
@@ -88,6 +92,8 @@ colcon build --symlink-install
 
 {: .troubleshoot }
 > Remember to `source install/setup.bash` first if you are in a new terminal!
+
+----
 
 ## RViz visualization test
 
@@ -137,6 +143,8 @@ You should now see the robot geometry in RViz and manipulate its joints using th
 
 To close any running processes, use `Ctrl + C` in the active terminal.
 
+----
+
 ## MoveIt and Gazebo test
 
 This test will launch an empty Gazebo simulation environment, load in the robot, and connect it to a MoveIt motion planning GUI in RViz.
@@ -163,6 +171,8 @@ You should now see two windows, one with the robot loaded into the Gazebo simula
 ![Simulating motion planning using Gazebo and MoveIt](assets/images/getting_started/gazebo_moveit.jpg)
 
 You can play around with the planner in MoveIt, execute motion paths, and see the robot move in Gazebo.
+
+----
 
 ## Using ROS in Rhino
 
@@ -206,7 +216,7 @@ You'll also need to link the `Gripper Collision STL` under `Create Attached Coll
 
 You can now follow the remainder of the template and start motion planning with MoveIt.
 
-Input COMPAS frames to the motion planning components, toggle the component, and a request will be sent to MoveIt for motion planning (you can see it running in the terminal). MoveIt will then send a response, which is converted into a COMPAS FAB trajectory and list of configurations, which you can then visualize.
+Input COMPAS frames to the motion planning components, toggle the `plan_trajectory` button on the component, and a request will be sent to MoveIt for motion planning (you can see it running in the terminal). MoveIt will then send a response, which is converted into a COMPAS FAB trajectory and list of configurations, which you can then visualize.
 
 
 [GitHub repository]: https://github.com/ADRLaboratory/robotic_fabrication_w23
