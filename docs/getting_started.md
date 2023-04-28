@@ -17,6 +17,8 @@ The following guide will get you started with robotic fabrication on the FABLab'
 1. TOC
 {:toc}
 
+----
+
 ## Code repository
 
 All of the files and code you will need to get started are located in `src` folder of the [GitHub repository] (also linked at the top right of each page). You can download the entire repository under `Code > Download ZIP` or you can [click here](https://github.com/ADRLaboratory/robotic_fabrication_w23/archive/refs/heads/main.zip). You can also use [git] if you are familiar with it (although we won't be covering git here).
@@ -162,9 +164,50 @@ You should now see two windows, one with the robot loaded into the Gazebo simula
 
 You can play around with the planner in MoveIt, execute motion paths, and see the robot move in Gazebo.
 
-## Connecting ROS to Rhino
+## Using ROS in Rhino
 
-Test text
+In the `src` folder of the code repository, there is a `rhino` folder that includes a Rhino file of the workcell, a template Grasshopper file with associated Python code (linked in `robotic_brick_assembly`), and the gripper tool geometry files.
+
+Open the Rhino and Grasshopper files.
+
+### Connect MoveIt and rosbridge
+
+We want to be able to use the motion planning capabilities of MoveIt while designing our robotic workflow in Rhino.
+
+Rhino is running on your local system while ROS is currently isolated in the WSL Linux environment. To create a channel for the two to communicate, we will be using [rosbridge], which provides a JSON API functionality including a WebSocket server for Rhino to connect to.
+
+To launch MoveIt and rosbridge together:
+
+```shell
+ros2 launch kr6_base_moveit_config moveit_compas_sim.launch.py
+```
+
+Unlike previously in the [MoveIt and Gazebo test](#moveit-and-gazebo-test), we are running MoveIt without a GUI, but we will still be able to utilize it using service calls.
+
+In the template Grasshopper file, toggle the connection to rosbridge. The `is_connected` output should show `True` if the connection is successful.
+
+### Load the robot
+
+In the next section, we need to define some local resources for the robot. Currently the robot meshes are not being published to ROS, so we need to connect those manually. We also can define the attached end-effector/tool at this time.
+
+For the `Load Robot` component:
+- Change the `mesh_directory` to the location of the kr6_base_description folder of the downloaded code repository on your local system (`<download folder>\robotic_fabrication_w23\src` by default).
+- Link the `tool_stl` file to `KR6_Gripper.stl` on your computer
+- Toggle the `load` button
+
+After a short amount of time, the robot will spawn into Rhino and the output panel will populate with the robot info.
+
+You'll also need to link the `Gripper Collision STL` under `Create Attached Collision Mesh` to `KR6_Gripper_collision.stl`.
+
+{: .note }
+> Default ROS units are in meters, kg, radians, seconds. Make sure your Rhino file is in meters!
+
+### Motion planning
+
+You can now follow the remainder of the template and start motion planning with MoveIt.
+
+Input COMPAS frames to the motion planning components, toggle the component, and a request will be sent to MoveIt for motion planning (you can see it running in the terminal). MoveIt will then send a response, which is converted into a COMPAS FAB trajectory and list of configurations, which you can then visualize.
+
 
 [GitHub repository]: https://github.com/ADRLaboratory/robotic_fabrication_w23
 [git]: https://git-scm.com/
@@ -172,3 +215,4 @@ Test text
 [Gazebo]: https://staging.gazebosim.org/home
 [MoveIt 2]: https://moveit.picknik.ai/humble/index.html
 [RViz]: http://wiki.ros.org/rviz
+[rosbridge]: http://wiki.ros.org/rosbridge_suite
