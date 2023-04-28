@@ -52,7 +52,7 @@ python -m compas_rhino.install
 {: .note }
 > When working with COMPAS FAB, make sure you have the environment activated (by using `conda activate robfab`). You will need to do this when starting a new terminal.
 >
-> You can also configure the default interpreter in VS Code by pulling up the Command Palette (`Ctrl+Shift+P`), typing in `Python: Select Interpreter`, and select the `robfab` environment.
+> You can also configure the default interpreter in VS Code by pulling up the Command Palette (`Ctrl + Shift + P`), typing in `Python: Select Interpreter`, and select the `robfab` environment.
 
 To check the installation, open Rhino, start the Python script editor (`EditPythonScript`), and you should be able to `import compas_fab`. When opening Grasshopper, you should also see some default COMPAS FAB components.
 
