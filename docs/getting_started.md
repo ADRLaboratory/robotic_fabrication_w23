@@ -10,6 +10,14 @@ If you haven't already, please finish all of the required [installation](install
 
 The following guide will get you started with robotic fabrication on the FABLab's KUKA KR 6 robots.
 
+## Table of contents
+1. [Code repository](#code-repository)
+2. [Create a ROS workspace](#create-a-ros-workspace)
+3. [Build ROS packages](#build-ros-packages)
+4. [RViz visualization test](#rviz-visualization-test)
+5. [MoveIt and Gazebo test](#moveit-and-gazebo-test)
+6. [Connecting ROS to Rhino](#connecting-ros-to-rhino)
+
 ## Code repository
 
 All of the files and code you will need to get started are located in `src` folder of the [GitHub repository] (also linked at the top right of each page). You can download the entire repository under `Code > Download ZIP` or you can [click here](https://github.com/ADRLaboratory/robotic_fabrication_w23/archive/refs/heads/main.zip). You can also use [git] if you are familiar with it (although we won't be covering git here).
@@ -130,8 +138,34 @@ To close any running processes, use `Ctrl + C` in the active terminal.
 
 ## MoveIt and Gazebo test
 
-Test text
+This test will launch an empty Gazebo simulation environment, load in the robot, and connect it to a MoveIt motion planning GUI in RViz.
 
+First launch an empty Gazebo world.
+
+```shell
+ros2 launch kr6_base_gazebo start_world.launch.py
+```
+
+In a second terminal, launch everything else.
+
+```shell
+ros2 launch kr6_base_moveit_config moveit_rviz_sim_time.launch.py
+```
+
+{: .note }
+> To open a second terminal in VS Code, you can use `New Terminal` again or click the plus icon at the top right of an existing terminal. You can also display the terminals side-by-side using a split terminal with the split square icon next to the plus (or use `Ctrl + Shift + 5` while in an existing terminal).
+>
+> Remember to `source install/setup.bash`!
+
+You should now see two windows, one with the robot loaded into the Gazebo simulation, and the other with MoveIt. Press the play button in Gazebo to start simulation time and finish the controller setup.
+
+![Simulating motion planning using Gazebo and MoveIt](assets/images/getting_started/gazebo_moveit.jpg)
+
+You can play around with the planner in MoveIt, execute motion paths, and see the robot move in Gazebo.
+
+## Connecting ROS to Rhino
+
+Test text
 
 [GitHub repository]: https://github.com/ADRLaboratory/robotic_fabrication_w23
 [git]: https://git-scm.com/
