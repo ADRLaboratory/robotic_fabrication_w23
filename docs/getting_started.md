@@ -62,7 +62,9 @@ Included in the provided code are three packages:
 - `kr6_base_gazebo` includes the files required for running a [Gazebo] physics simulation environment.
 - `kr6_base_moveit_config` includes the [MoveIt 2] motion planning and semantics files.
 
-You will need to copy these packages (their folders) into the `src` folder of the ROS workspace. To do this, open Windows File Explorer and at the bottom of the left side bar you should see that WSL added a Linux shortcut. Navigate from there through `Ubuntu > home > <username> > kr6 > src`. You can now copy/paste the downloaded folders here.
+You will need to copy these packages (their folders) into the `src` folder of the ROS workspace.
+
+To do this, open Windows File Explorer and at the bottom of the left side bar you should see that WSL added a Linux shortcut. Navigate from there through `Ubuntu > home > [username] > kr6 > src`. You can now copy/paste the downloaded folders here.
 
 Build the packages with the following command (all of the remaining commands can be run from a VS code terminal in the ROS workspace):
 
@@ -87,7 +89,13 @@ ros2 launch kr6_base_description display.launch.py
 ```
 
 {: .note }
-> We will be using the `launch` command frequently, so it is useful to understand how it works. `ros2 launch` defines the command you are running (launching a file in ROS 2). The next parameter describes the package where the launch file is located, in this case `kr6_base_description`. The command will look for launch files in the `launch` folder of the package. The last parameter is the name of the launch file, which is typically written in Python, XML, or YAML. The launch file contains instructions for which ROS 2 nodes to create and with what paremeters.
+> We will be using the `launch` command frequently, so it is useful to understand how it works.
+>
+> `ros2 launch` defines the command you are running (launching a file in ROS 2).
+>
+> The next parameter describes the package where the launch file is located, in this case `kr6_base_description`. The command will look for launch files in the `launch` folder of the package.
+>
+> The last parameter is the name of the launch file, which is typically written in Python, XML, or YAML. The launch file contains instructions for which ROS 2 nodes to create and with what paremeters.
 
 {: .troubleshoot }
 > If you get an error `[rviz2-3] qt.qpa.xcb: could not connect to display`, you may need to update WSL. In **administrator** PowerShell or Windows Command Prompt:
@@ -103,15 +111,15 @@ This command will open RViz and a Joint State Publisher GUI.
 
 To display the robot, first we need to define the global frame. Under `Global Options`, select the dropdown for `Fixed Frame` and change it to `world`.
 
-![Set World Frame](assets/images/getting_started/set_world_frame.png)
+![Set World Frame](assets/images/getting_started/set_world_frame.jpg)
 
 At the bottom left, select `Add` then `RobotModel`.
 
-![Add RobotModel](assets/images/getting_started/add_robot_model.png)
+![Add RobotModel](assets/images/getting_started/add_robot_model.jpg)
 
 Under the newly added `RobotModel`, select the dropdown for the `Description Topic` and change it to `/robot_description`.
 
-![Set Description Topic](assets/images/getting_started//set_robotmodel_description_topic.png)
+![Set Description Topic](assets/images/getting_started//set_robotmodel_description_topic.jpg)
 
 You should now see the robot geometry in RViz and manipulate its joints using the sliders in the Joint State Publisher GUI!
 
